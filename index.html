@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoopStats: Higher or Lower</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <header class="scoreboard">
+            <h1>HoopStats <span class="sub-title">Higher or Lower</span></h1>
+            <div class="score-box">
+                <p>Current Streak: <span id="current-streak">0</span></p>
+                <p>High Score: <span id="high-score">0</span></p>
+            </div>
+            <div class="stat-prompt">
+                Who has a higher <span id="target-stat-display">PPG</span>?
+            </div>
+        </header>
+
+        <main class="split-screen">
+            <section class="player-card-wrapper left-side">
+                <div class="player-card stable" id="player-left">
+                    <div class="card-inner">
+                        <h2 class="player-name">Player One</h2>
+                        <p class="player-team">Team</p>
+                        <div class="stat-value visible" id="left-stat-value">0.0</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="vs-circle">VS</div>
+
+            <section class="player-card-wrapper right-side">
+                <div class="player-card interactive" id="player-right">
+                    <div class="card-inner" id="right-card-inner">
+                        <div class="card-face card-front">
+                            <h2 class="player-name">Player Two</h2>
+                            <p class="player-team">Team</p>
+                            <div class="action-buttons">
+                                <button class="btn btn-higher" onclick="game.makeGuess('higher')">Higher ▲</button>
+                                <button class="btn btn-lower" onclick="game.makeGuess('lower')">Lower ▼</button>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h2 class="player-name">Player Two</h2>
+                            <p class="player-team">Team</p>
+                            <div class="stat-value" id="right-stat-value">0.0</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="overlay" id="game-over-overlay">
+            <div class="overlay-content">
+                <h2>Game Over! 🏀</h2>
+                <p>You guessed incorrectly.</p>
+                <p>Final Streak: <span id="final-streak">0</span></p>
+                <button class="btn btn-restart" onclick="game.restartGame()">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
