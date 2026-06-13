@@ -26,6 +26,15 @@ The project utilizes a clean layout separation layout model:
 - '/index.html/ - Semantic DOM scaffolding, scoreboard structures, and modal windows
 - '/style.css/' - Hardware-accelerated 3D transition layers, typography metrics, and theme matrices
 
+## Technology Capabilities Matrix
+**Semantic Interface** - HTML5 Document Structure, Dynamic Viewport Scaling, Layout Roles
+**Animation UI/UX**	- CSS3 Grid & Flexbox, Perspective Transitions, State Feedback Fills
+**Engine Mechanics** - Object-Oriented ES6 JavaScript Classes, Async Microtask Handlers, Mutating Arrays
+**Local Memory** - Browser Storage API (localStorage), JSON Key Serialization
+
+## License
+Distibuted under the **MIT** License. See **License** for more information.
+
 ## 🕹️ Live Architecture Blueprint
 
 ```text
